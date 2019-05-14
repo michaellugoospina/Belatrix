@@ -1,0 +1,22 @@
+<div  class="container mainContainer">
+
+  <div class="form-group col-md-6 col-xs-12" style="padding: 0;">
+    <div class="col-md-6 col-xs-12" style="float:right;">
+    <input id="euText" name="euText" (keypress)="decimalValidator($event)" (input)="currencyFormatEuro()" [(ngModel)]="EuroValue" type="text" placeholder="EU" class="form-control input-md">
+    </div>
+  </div>
+
+  <div class="form-group col-md-6 col-xs-12" style="padding: 0;">
+    <div class="col-md-6 col-xs-12" style="float:left;">
+    <input id="usdText" name="usdText" [(ngModel)]="UsdValue" type="text" disabled="true" placeholder="USD" class="form-control input-md">
+    </div>
+  </div>
+
+
+  <div class="form-group" >
+    <div class="col-md-12  col-xs-12" style="text-align:center; margin-top: 10px;">
+      <button id="calculateBtn" [disabled]="!EuroValue" (click)="GetUsdExchange()" name="calculateBtn" class="btn btn-success" style="font-size: 20px;" >Calculate</button>
+    </div>
+  </div>
+
+</div>
